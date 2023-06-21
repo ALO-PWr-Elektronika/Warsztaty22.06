@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta charset="UTF-8">
+    <title>Grupa piąta - Wiadomość dnia - warsztaty 22.06</title>
+
+</head>
+<body>
+<a href="{{ url_for('hello_world')}}">Powrót do strony głównej</a>
+<h1>Wiadomość dnia - Grupa piąta</h1>
+<body>
+{% if part > 0 %}
+    <h2>Warstwa elektroniczna</h2>
+    Dowiedzmy się jak odczytać z serwera informacje - wiadomość dnia, ważny komunikat, cokolwiek dusza zapragnie
+    <br/>
+    Zadania:
+    <ol>
+        <li>Wyszukaj w dostępnych źródłach (internecie), lub kopnij prowadzącego - czym są wyświetlacze ciekłokrystaliczne - jakie oferują możliwości, a jakie prezentują ograniczenia?</li>
+        <li>Przeczytałeś? Wykorzystaj swoją wiedzę poprzez podłączenie wyświetlacza LCD 16x2 do mikrokontrolera przy użyciu biblioteki LiquidCrystal</li>
+        <li>Przy użyciu protokołu serial napisz na mikrokontroler program, który wyświetli na wyświetlaczu wiadomość wpisaną na laptopie.</li>
+        <li>Wymyśl w jaki sposób można na ograniczonym wyświetlaczu pokazać dłuższy tekst, wykonaj odpowiedni do tego program</li>
+        <li>Wyszukaj w dostępnych źródłach inne formy prezentowania informacji. Które zdecydowanie zwyciężają tekst?</li>
+    </ol>
+{% endif %}
+{% if part > 1 %}
+    <h2>Warstwa informatyczna</h2>
+    Ci cwani elektronicy z poprzedniej grupy dali radę (mam nadzieję) napisać program na mikrokontroler, który pozwala z poziomu laptopa sterować
+    tekstem na wyświetlaczu.
+    <ol>
+        <li>Wyszukaj w dostępnych źródłach (internecie) lub spytaj prowadzącego - czym jest protokół Serial oraz w jaki sposób mikrokontroler komunikuje się z laptopem?</li>
+        <li>Wykonaj program w pythonie, który odbierze wartość zmiennej - wiadomość dnia i przekaże ją do wyświetlacza</li>
+        <li>Zaproponuj rozwiązanie od strony klienta i serwera, który zminimalizuje liczbę zapytań o nowe wiadomości do serwera</li>
+        <li>Wykonaj z pomocą idei REST API program we Flasku / wygodnej dla ciebie bibliotece, który w optymalny sposób będzie wysyłać i odbierać zmieniające się wiadomości</li>
+        <li>Wyszukaj w dostępnych źródłach informacje na temat aplikacji tunelujących. Jak wiadomości można wysyłać z końca świata?</li>
+    </ol><br/>
+    Wiadomość dnia:
+    ...
+{% endif %}
+</body>
+</html>

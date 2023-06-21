@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta charset="UTF-8">
+    <title>Grupa trzecia - Zegar binarny - warsztaty 22.06</title>
+
+</head>
+<body>
+<a href="{{ url_for('hello_world')}}">Powrót do strony głównej</a>
+<h1>Zegar binarny - Grupa trzecia</h1>
+{% if part > 0 %}
+    <h2>Warstwa elektroniczna</h2>
+    Dowiedzmy się jak odczytać z serwera informacje - poszczególne stany elementów współistniejących w sieci - np. wspólną dla systemu godzinę.
+    <br/>
+    Zadania:
+    <ol>
+        <li>Wyszukaj w dostępnych źródłach (internecie), lub spytaj prowadzącego - czym jest i jak działa zegar binarny?</li>
+        <li>Przeczytałeś? Spróbuj wykonać zegar przy pomocy arduino</li>
+        <li>Wprowadź z laptopa na mikrokontroler, przy użyciu protokołu Serial aktualną godzinę, tak aby zsynchronizować ze sobą czas laptopa i zegara</li>
+        <li>Zaproponuj w jaki sposób można zminimalizować liczbę synchronizacji? Dlaczego tak ważne jest aby wszystkie urządzenia miał ten sam czas?</li>
+        <li>Wyszukaj w dostępnych źródkłach dlaczego data 1 stycznia 1970 roku jest datą wyjątkową?</li>
+    </ol>
+{% endif %}
+{% if part > 1 %}
+    <h2>Warstwa informatyczna</h2>
+    Ci cwani elektronicy z poprzedniej grupy dali radę napisać program na mikrokontroler, który pozwala z poziomu laptopa synchronizować godzinę zegara binarnego,
+    nie lepiej byłoby pytać sam serwer, w razie gdyby zegar czasu rzeczywistego na laptopie przestał działać?
+    <ol>
+        <li>Wyszukaj w dostępnych źródłach (internecie) lub kopnij prowadzącego - czym jest protokół Serial i w jaki sposób mikrokontroler komunikuje się z laptopem?</li>
+        <li>Wykonaj program w pythonie, który odbierze wartość zmiennej - godzinę serwera i przekaże go do mikrokontrolera przy pomocy poznanego protokołu</li>
+        <li>Zaproponuj rozwiązanie od strony serwera, które zminimalizuje liczbę wykonywanych w jego kierunku zapytań</li>
+        <li>Wykonaj z pomocą idei REST API program we Flasku / wygodnej dla ciebie bibliotece, który w optymalny sposób będzie odpowiadać na pytania o godzinę dowolnego użytkownika w sieci</li>
+        <li>Wyszukaj w dostępnych źródłach informacje na temat aplikacji tunelujących. Czy godzinę (lub ideowo bardziej interesującą informacje, np. podgląd z kamer) można uzyskać z końca świata?</li>
+    </ol><br/>
+    <p>Godzina serwera: {{time}}</p>
+{% endif %}
+</body>
+</html>

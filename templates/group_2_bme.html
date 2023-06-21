@@ -2,6 +2,7 @@
 
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,11 +10,37 @@
 </head>
 
 <body>
+<a href="{{ url_for('hello_world')}}">Powrót do strony głównej</a>
 <!-- your content here... -->
 <h1>Stacja Pogodowa - Grupa druga</h1>
-<p>Temperatura: {{temp}} C</p>
-<p>Ciśnienie: {{pres}} hPa</p>
-<p>Wilgotność: {{humd}} %</p>
+{% if part > 0 %}
+    <h2>Warstwa elektroniczna</h2>
+    Dowiedzmy się jaka jest temperatura, ciśnienie i wilgotność względna w naszej sali 3.06.
+    <br/>
+    Zadania:
+    <ol>
+        <li>Wyszukaj w dostępnych źródłach (internecie), lub spytaj prowadzącego - czym jest i jakie są mocne strony protokołu komunikacyjnego I2C</li>
+        <li>Przeczytałeś? To dobrze się składa, teraz czas na napisanie programu, który skomunikuje moduł stacji pogodowej BME280 z Arduino </li>
+        <li>Zwróć do laptopa, przy użyciu protokłu Serial, wartość chwilową temperatury, ciśnienia oraz wilgotności</li>
+        <li>Zaproponuj jakich zmian można dokonać w układzie, aby można było go zamontować na zewnątrz</li>
+        <li>Wyszukaj w dostępnych źródłach czym jest wzór barometryczny, dokonaj z poziomu mikrokontrolera aproksymacji wysokości, na której aktualnie znajduje się Wrocław</li>
+    </ol>
+{% endif %}
+{% if part > 1 %}
+    <h2>Warstwa informatyczna</h2>
+    Ci cwani elektronicy z poprzedniej grupy dali radę napisać program na mikrokontroler, który zbiera dane z czujnika stanu atmosfery.
+    Nie lepiej byłoby sterować tym np z telefonu, z daleka, z końca świata?
+    <ol>
+        <li>Wyszukaj w dostępnych źródłach (internecie) lub kopnij prowadzącego - czym jest protokół Serial i w jaki sposób mikrokontroler komunikuje się z laptopem?</li>
+        <li>Wykonaj program w pythonie, który odbierze wartość zmiennej - chwilowy stan atmosfery i przekaże go do serwera przy użyciu metody POST</li>
+        <li>Zaproponuj rozwiązanie od strony serwera, które zminimalizuje liczbę wykonywanych w jego kierunku zapytań</li>
+        <li>Wykonaj z pomocą idei REST API program we Flasku / wygodnej dla ciebie bibliotece, który w optymalny sposób będzie odpowiadać na pytania dowolnego użytkownika w sieci</li>
+        <li>Wyszukaj w dostępnych źródłach informacje na temat aplikacji tunelujących. Czy stan atmosfery w miejscu rozmieszczenia czujnika można uzyskać z końca świata?</li>
+    </ol><br/>
+    <p>Temperatura: {{temp}} C</p>
+    <p>Ciśnienie: {{pres}} hPa</p>
+    <p>Wilgotność: {{humd}} %</p>
+{% endif %}
 </body>
 
 </html>

@@ -2,23 +2,43 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Test serwera - warsztaty 22.06</title>
+    <title>Test serwera - warsztaty 22.06</title>
 
 </head>
 
 <body>
-  <!-- your content here... -->
-  <h1>Test aplikacji serwera</h1>
-  <p>Serwer działa</p>
-  <button onclick="roll()">DONT Check me out :3</button>
-  <script>
+<!-- your content here... -->
+<h1>Aplikacja Serwera - Tymczasowa baza warsztatów</h1>
+Cześć, prezentuję przed wami zbiór interesujących elementów IoT do wykonania na warsztatach.<br/>
+W razie jakichkolwiek pytań - proszę śmiało, pomogę na tyle, na ile będę w stanie.<br/>
+Dla każdej grupy przygotowałem zestaw różnych ćwiczeń, które łączy wspólna idea.<br/>
+Zachęcam do spokojnego przechadzania się po sali i przeglądania podstron innych grup<br/>
+Życzę miłej zabawy.
+<h2>Lista grup</h2>
+<ol>
+    <li><a href="/grupa1">Grupa 1 - Zmiana stanu układu zewnętrznego</a></li>
+    <li><a href="/grupa2">Grupa 2 - Pomiar stanu atmosfery</a></li>
+    <li><a href="/grupa3">Grupa 3 - Zegar binarny - czas w systemie IoT</a></li>
+    <li><a href="/grupa4">Grupa 4 - Dostęp przy użyciu klucza fizycznego</a></li>
+    <li><a href="/grupa5">Grupa 5 - Feed, wiadomość dnia</a></li>
+    <li><a href="/grupa6">Grupa 6 - Panel kontrolny</a></li>
+    <li><a href="/grupa7">Grupa 7 - Fizyczne bezpieczeństwo</a></li>
+</ol>
+<a href="https://github.com/ALO-PWr-Elektronika/Warsztaty22.06">[Link do publicznego repozytorium tych zajęć]</a>
+<br/>
+<br/>
+<button onclick="roll()">bro pls DONT Check me out :3</button>
+<script>
     function roll() {
        window.location.href = "https://bit.ly/3BlS71b"
     }
-  </script>
+
+
+</script>
 </body>
 
 </html>
