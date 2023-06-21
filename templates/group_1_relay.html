@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Grupa pierwsza - przekaznik - warsztaty 22.06</title>
+    <script>
+function turnon()
+{
+    fetch("http://192.168.100.138:5000/grupa1on",{mode: 'no-cors'});
+}
+function turnoff()
+{
+    fetch("http://192.168.100.138:5000/grupa1off",{mode: 'no-cors'});
+}
+    </script>
+</head>
+
+<body>
+<!-- your content here... -->
+<h1>Przekaźnik - Grupa pierwsza</h1>
+<button onclick="turnon()">Włącz listwę LED</button>
+<button onclick="turnoff()">Wyłącz listwę LED</button>
+</body>
+
+</html>
