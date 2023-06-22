@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <iframe id="iframe" src="/data" style="border: none"></iframe>
+        <script>   
+            window.setInterval(function() {
+                reloadIFrame()
+            }, 100);
+
+            function reloadIFrame() {
+                console.log('reloading..');
+                document.getElementById('iframe').contentWindow.location.reload();
+            }
+
+            function delta() {
+                var temp = false;
+                if (temp == false) {
+                    old = document.getElementById('iframe')
+                }
+            }
+        </script>
+    </body>
+</html>
