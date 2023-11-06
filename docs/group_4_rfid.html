@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/main.css">
+    <meta charset="UTF-8">
+    <title>Grupa czwarta - Dostęp przy użyciu klucza fizycznego - warsztaty 22.06</title>
+
+</head>
+<body>
+<a href="../">Powrót do strony głównej</a>
+<h1>Dostęp RFID - Grupa czwarta</h1>
+<body>
+
+    <h2>Warstwa elektroniczna</h2>
+    Dowiedzmy się jak przyznawać bądź odmawiać dostępu poszczególnym posiadaczom kluczy fizycznych - kart RFID.
+    <br/>
+    Zadania:
+    <ol></head>
+        <li>Wyszukaj w dostępnych źródłach (internecie), lub kopnij prowadzącego - czym jest RFID oraz jakie dane mieszczą w sobie karty dostępowe?</li>
+        <li>Przeczytałeś? Wykorzystaj poprzez podłączenie systemu MFRC522 do czytania danych karty RFID</li>
+        <li>Wprowadź do laptopa przy użyciu protokołu serial ID karty RFID</li>
+        <li>Przygotuj i przetestuj, przy użyciu pozostałych elementów dwa sygnały świetlne - niebieski oznaczający dostęp i czerwony oznaczający odmowę dostępu</li>
+        <li>Wyszukaj w dostępnych źródkłach zagrożenia związane z systemem RFID - czy i do jakiego stopnia może być on uznany za bezpieczny?</li>
+    </ol>
+    <h2>Warstwa informatyczna</h2>
+    Ci cwani elektronicy z poprzedniej grupy dali radę napisać program na mikrokontroler, który pozwala zczytać danę karty dostępowej RFID,
+    teraz pozostaje wysłać je na serwer i sprawdzić czy dostęp należy przyznać, czy też nie.
+    <ol>
+        <li>Wyszukaj w dostępnych źródłach (internecie) lub spytaj prowadzącego - czym jest protokół Serial oraz w jaki sposób mikrokontroler komunikuje się z laptopem?</li>
+        <li>Wykonaj program w pythonie, który odbierze wartość zmiennej - ID karty dostępowej i przekaże go do serwera przy pomocy poznanego protokołu</li>
+        <li>Zaproponuj rozwiązanie od strony klienta, który odbierze odpowiedź serwera - przyznanie, bądź odmówienie dostępu</li>
+        <li>Wykonaj z pomocą idei REST API program we Flasku / wygodnej dla ciebie bibliotece, który w optymalny sposób będzie odpowiadać na pytania o historię przyznanych dostępów</li>
+        <li>Wyszukaj w dostępnych źródłach informacje na temat bezpieczeństwa RFID - Jak sprawić by dane karty nie zostały przechwycone podczas ruchu w sieci?</li>
+    </ol><br/>
+    <p>Historia dostępów</p>
+
+</body>
+</html>

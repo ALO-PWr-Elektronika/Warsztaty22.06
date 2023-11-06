@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/main.css" />
+    <meta charset="UTF-8" />
+    <title>Grupa szósta - Panel kontrolny - warsztaty 22.06</title>
+  </head>
+  <body>
+    <a href="../">Powrót do strony głównej</a>
+    <h1>Panel kontrolny - Grupa szósta</h1>
+
+    <h2>Warstwa elektroniczna</h2>
+    Dowiedzmy się jak odczytać i wnieść do serwera informacje kontrolne - stany
+    poszczególnych systemów.
+    <br />
+    Zadania:
+    <ol>
+      <li>
+        Wyszukaj w dostępnych źródłach (internecie), lub kopnij prowadzącego -
+        jak łączyć szereg diód przy użyciu niewielkiej liczby wyjść?
+      </li>
+      <li>
+        Wykorzystaj informacje o multiplekserze i stwórz układ czterech diód LED
+        oraz czterech łączników, które sterują nimi przez mikrokontroler
+      </li>
+      <li>
+        Przy użyciu protokołu serial napisz na mikrokontroler program, który w
+        zależności od wpisanej informacji włączy, bądź wyłączy konkretne diody
+      </li>
+      <li>
+        Napisz na mikrokontroler program, który wyśle do laptopa wartości
+        poszczególnych stanów.
+      </li>
+      <li>
+        Jak sprawić by mikrokontroler przekazywał informacje w sposób optymalny?
+        Jak zminimalizować liczbę zapytań do laptopa?
+      </li>
+    </ol>
+    <h2>Warstwa informatyczna</h2>
+    Ci cwani elektronicy z poprzedniej grupy dali radę (mam nadzieję) napisać
+    program na mikrokontroler, który pozwala z poziomu laptopa sterować diodami
+    w układzie z mikrokontrolerem.
+    <ol>
+      <li>
+        Wyszukaj w dostępnych źródłach (internecie) lub spytaj prowadzącego -
+        czym jest protokół Serial oraz w jaki sposób mikrokontroler komunikuje
+        się z laptopem?
+      </li>
+      <li>
+        Wykonaj program w pythonie, który odbierze szereg zmiennych oraz
+        przekaże je do wyświetlenia mikrokontrolerowi
+      </li>
+      <li>
+        Zaproponuj rozwiązanie od strony klienta i serwera, który zminimalizuje
+        liczbę zapytań o nowe informacje do serwera
+      </li>
+      <li>
+        Wykonaj z pomocą idei REST API program we Flasku / wygodnej dla ciebie
+        bibliotece, który w optymalny sposób będzie wysyłać i odbierać
+        zmieniające się wartości kontrolne
+      </li>
+      <li>
+        Wyszukaj w dostępnych źródłach informacje na temat aplikacji
+        tunelujących. Jak system można kontrolować z końca świata?
+      </li>
+    </ol>
+    <br />
+    <pre>
+    Stan diód:
+    D1 - ON
+    D2 - OFF
+    D3 - OFF
+    D4 - OFF
+    </pre>
+  </body>
+</html>
